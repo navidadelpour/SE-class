@@ -1,5 +1,6 @@
 # SE-class
 unity game for software engineering class
+
 these instructions helps you to better use git in your unity projects
 
 how to clone your project from github:
