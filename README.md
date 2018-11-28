@@ -10,7 +10,7 @@ how to clone your project from github:
 2- clone the repository with these commands in the prject folder
 
     git init
-    git remote add origin https://github.com/navidadelpour/SE-project.git
+    git remote add origin https://github.com/navidadelpour/SE-class.git
     git pull origin master
 
 
