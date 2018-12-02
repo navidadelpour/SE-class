@@ -1,22 +1,24 @@
-# SE-project
+# SE-class
 unity game for software engineering class
 
-how to use:
+these instructions helps you to better use git in your unity projects
+
+how to clone your project from github:
 
 1- create a new folder with the project name
 
 2- clone the repository with these commands in the prject folder
 
     git init
-    git remote add origin https://github.com/navidadelpour/SE-project.git
+    git remote add origin https://github.com/navidadelpour/SE-class.git
     git pull origin master
 
 
 3- open the project in unity
 
-how to complete code:
+how to complete your code and add features:
 
-foreach changes you want to make please create a new branch and then after finishing you job merge into the master
+foreach changes you want to make please create a new branch and then after finishing your job merge into the master
 
 1- create a branch and switch on it
     
