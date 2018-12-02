@@ -12,14 +12,20 @@ public class GameManager : MonoBehaviour {
 	public bool gameover;
 
 	void Awake() {
+		upper_road = GameObject.Find ("UpperRoad");
+		under_road = GameObject.Find ("UnderRoad");
 		instance = this;
 	}
 
 	void Start () {
 		gameover = false;
 		score += (int)Time.time;
-		upper_road = GameObject.Find ("UpperRoad");
-		under_road = GameObject.Find ("UnderRoad");
+	}
+
+	void Update() {
+		if (Input.GetKeyDown (KeyCode.G)) {
+			upper_road.GetComponent<Road> ().IncreaseSector ();
+		}
 	}
 
 }
