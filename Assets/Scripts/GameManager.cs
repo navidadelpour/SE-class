@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	public int score;
 	public bool gameover;
 
+
 	void Awake() {
 		upper_road = GameObject.Find ("UpperRoad");
 		under_road = GameObject.Find ("UnderRoad");

@@ -31,8 +31,10 @@ public class Road : MonoBehaviour {
 			IncreaseSector ();
 		}
 
-		if(this.name == "UpperRoad") 
+		if(this.name == "UpperRoad") {
 			MakeHole ();
+			GameObject.Find ("Player").GetComponent<BallController> ().SetMovementAngle (angle);
+		}
 	}
 
 	// 0 - 35
@@ -130,5 +132,17 @@ public class Road : MonoBehaviour {
 
 		MakeHole ();
 	}
+	public void DestroyRoad(){
+		Destroy (this.gameObject);
+		GameObject upper_road = GameObject.Find ("UnderRoad");
+		upper_road.name = "UpperRoad";
+		GameManager.instance.upper_road = upper_road;
 
+		GameObject under_road = new GameObject ();
+		under_road.name = "UnderRoad";
+		GameManager.instance.under_road = under_road;
+		under_road.AddComponent<Road> ();
+
+		upper_road.GetComponent<Road> ().MakeHole ();
+	}
 }
